@@ -32,7 +32,7 @@ SkyCast is a high-performance, modern weather application designed to provide re
 
 ## 🌡️ Atmospheric Insights
 
-![Atmosphere](https://images.unsplash.com/photo-1530908269566-35240a792579?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=400&q=80)
+![Atmosphere](https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?auto=format&fit=crop&q=80&w=1200&h=400)
 
 ---
 
