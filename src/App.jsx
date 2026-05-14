@@ -132,7 +132,6 @@ function App() {
 
       <main className="dashboard-container" style={{ position: 'relative', zIndex: 10, marginTop: '1.25rem' }}>
         <header className="header-nav" style={{
-          gridColumn: 'span 4',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -155,7 +154,7 @@ function App() {
             </div>
           </div>
 
-          <div className="search-wrapper" ref={searchRef} style={{ flex: '1 1 400px', maxWidth: '600px', position: 'relative' }}>
+          <div className="search-wrapper" style={{ flex: '1 1 auto', maxWidth: '600px', position: 'relative' }}>
             <div className="search-glass-elite" style={{ padding: '0.85rem 2rem', background: 'rgba(255,255,255,0.04)', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
               <SafeIcon name="Search" size={18} color="#38bdf8" />
               <input
@@ -295,7 +294,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bento-card full-width" style={{ height: '520px', padding: '3rem' }}>
+            <div className="bento-card full-width thermal-projection-card" style={{ height: '520px', padding: '3rem' }}>
               <div className="stat-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
                   <div className="brand-logo-glow" style={{ background: '#38bdf8', padding: '8px', borderRadius: '10px' }}><SafeIcon name="Activity" size={16} color="#000" /></div>
@@ -307,8 +306,8 @@ function App() {
                 </div>
               </div>
               
-              <div style={{ width: '100%', height: '340px', position: 'relative', padding: '0 10px' }}>
-                <ResponsiveContainer width="100%" height="100%">
+              <div className="chart-wrapper-elite" style={{ width: '100%', position: 'relative', padding: '0 10px' }}>
+                <ResponsiveContainer width="100%" height={340}>
                   <AreaChart data={hourly} margin={{ top: 20, right: 30, left: 0, bottom: 20 }}>
                     <defs>
                       <linearGradient id="colorTemp" x1="0" y1="0" x2="0" y2="1">
@@ -374,9 +373,6 @@ function App() {
               </div>
               
               <div className="forecast-grid-elite" style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(7, 1fr)', 
-                gap: '1.25rem',
                 position: 'relative',
                 minHeight: '260px'
               }}>
@@ -433,9 +429,9 @@ function App() {
           </div>
         )}
 
-        <footer className="elite-footer-advanced" style={{ gridColumn: 'span 4', marginTop: '3rem', padding: '5rem 0 5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-          <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '6rem', marginBottom: '6rem' }}>
-            <div style={{ maxWidth: '450px' }}>
+        <footer className="elite-footer-advanced">
+          <div className="footer-grid">
+            <div className="brand-footer-section" style={{ maxWidth: '450px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '2rem' }}>
                 <div className="brand-logo-glow" style={{ background: '#38bdf8', padding: '10px', borderRadius: '14px', boxShadow: '0 0 25px rgba(56,189,248,0.5)' }}><SafeIcon name="Zap" size={26} color="#000" fill="#000" /></div>
                 <h2 style={{ fontSize: '2rem', fontWeight: 950, margin: 0, letterSpacing: '-0.04em' }}>SKYCAST <span style={{ color: '#38bdf8' }}>ELITE</span></h2>
