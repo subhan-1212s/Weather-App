@@ -116,6 +116,19 @@ body {
 .bento-card.tall { grid-row: span 2; }
 .bento-card.full-width { grid-column: span 4; }
 
+.header-nav {
+  grid-column: span 4;
+}
+
+/* 7-Day Archive Desktop Grid */
+.forecast-grid-elite {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.25rem;
+  position: relative;
+  min-height: 260px;
+}
+
 /* Responsive Grid Adjustments */
 @media (max-width: 1200px) {
   .dashboard-container { grid-template-columns: repeat(2, 1fr); }
@@ -197,23 +210,12 @@ body {
   .chart-wrapper-elite { height: 220px !important; width: 100% !important; }
 
   .footer-grid { 
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 2rem !important; 
-    text-align: left !important;
-    margin-bottom: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.5rem !important; 
+    text-align: center;
   }
-  .brand-footer-section { grid-column: span 2 !important; }
-  .brand-footer-section h2 { font-size: 1.5rem !important; }
-  .brand-footer-section p { font-size: 0.85rem !important; }
-  
-  .footer-col h4 { margin-bottom: 1rem !important; font-size: 0.65rem !important; opacity: 0.4; }
-  .footer-col a { font-size: 0.8rem !important; margin-bottom: 0.5rem !important; }
-  
-  .social-links-footer { margin-top: 1.5rem !important; gap: 1.25rem !important; justify-content: flex-start !important; }
-  .footer-bottom-tier { margin-top: 2rem !important; padding-top: 2rem !important; flex-direction: column !important; align-items: flex-start !important; gap: 1rem !important; font-size: 0.7rem !important; }
-
-  .elite-footer-advanced { margin-top: 3rem !important; padding: 2.5rem 1rem !important; }
+  .elite-footer-advanced { margin-top: 3rem !important; padding: 4rem 1rem !important; width: 100% !important; grid-column: span 1 !important; }
   
   .system-marquee { font-size: 0.7rem !important; }
 }
@@ -252,6 +254,7 @@ body {
 
 /* Footer Advanced */
 .elite-footer-advanced {
+  grid-column: span 4;
   margin-top: 8rem;
   padding: 6rem 0 3rem;
   border-top: 1px solid var(--glass-border);
